@@ -60,9 +60,9 @@ class MyClient(discord.Client):
         if message.content.startswith('/Cointoss'):
             coinflip = random.randint(1, 2)
             if coinflip == 1:
-                await message.channel.send('Es ist... Zahl!')
+                await message.channel.send('Its... Heads!')
             elif coinflip == 2:
-                await message.channel.send('Es ist... Kopf!')
+                await message.channel.send('Its... Tails!')
             else:
                 await message.channel.send('Error')
         
@@ -72,4 +72,5 @@ class MyClient(discord.Client):
         
 
 client = MyClient(intents=intents)
+
 client.run('NothingToSeeHere')
