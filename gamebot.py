@@ -9,7 +9,6 @@ intents.message_content = True
 class MyClient(discord.Client):
     async def on_ready(self):
         print('Logged on as {0}!'.format(self.user))
-        await bot.tree.sync()
     
     async def on_message(self, message):
         if message.author == self.user:
@@ -74,3 +73,4 @@ class MyClient(discord.Client):
 client = MyClient(intents=intents)
 
 client.run('NothingToSeeHere')
+
